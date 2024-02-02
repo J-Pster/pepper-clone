@@ -1,0 +1,88 @@
+@import '../styles/mixins.scss', '../styles/variables.scss', '../styles/functions.scss', '../styles/mixins.scss';
+
+.button {
+  padding: 10px 28px;
+  border-radius: 6px;
+  @include font(rem(13), 500, rem(14), color($pepper-colors, primary));
+
+  &__primary {
+    @extend .button;
+    background-color: color($button-colors, primary);
+    color: color($text-colors, white);
+    
+  }
+
+  &__secondary {
+    @extend .button;
+    background-color: color($button-colors, white);
+
+  }
+}
+
+.header {
+  @include flex(space-between, center);
+  margin: 0 122px;
+  padding: 10px 24px;
+
+  nav {
+  }
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 24px;
+  height: calc(100vh - 150px);
+
+  padding: 48px 32px 0 32px;
+  margin: 0 122px;
+  overflow: hidden;
+
+  &__right {
+    position: relative;
+
+    img {
+      width: 100%;
+
+      &:nth-child(1) {
+        position: absolute;
+      }
+
+      &:nth-child(2) {
+        position: absolute;
+        filter: drop-shadow(rgba(14, 7, 28, 0.4) 78px 4px 36px);
+      }
+    }
+  }
+
+  &__left {
+    
+    @include flex(flex-start, flex-start, column);
+    padding: 48px 12px;
+
+    h1 {
+      @include font(rem(48), 800, rem(58), color($text-colors, primary));
+    }
+
+    h2 {
+      @include font(rem(18), 400, rem(24), color($text-colors, secondary));
+
+      strong {
+        color: color($text-colors, bold);
+      }
+    }
+
+    .button__hero {
+      @extend .button__primary;
+      padding: 16px 32px;
+      font-size: 16px;
+    }
+  }
+}
+
+.why__pepper {
+  @include flex(center, center, column);
+  padding: 48px 32px;
+
+  background-color: color($pepper-colors, primary);
+}

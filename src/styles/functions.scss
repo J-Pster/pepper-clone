@@ -1,0 +1,8 @@
+@function color($set-colors, $color-value) {
+  @return map-get($set-colors, $color-value);
+}
+
+@function rem($size) {
+  @return $size / 16 * 1rem;
+}
+

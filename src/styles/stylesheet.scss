@@ -1,0 +1,22 @@
+@import 'variables', 'functions';
+
+// Titles
+@mixin title-primary {
+  color: color($text-colors, primary);
+  font-size: 32px;
+}
+
+@mixin title-secondary {
+  color: color($text-colors, secondary);
+  font-size: 18px;
+}
+
+// Buttons
+
+@mixin button-primary {
+
+}
+
+@mixin button-secondary {
+
+}
