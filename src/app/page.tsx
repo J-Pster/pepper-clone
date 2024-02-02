@@ -15,6 +15,9 @@ export default function Home() {
             Criar Conta
           </Link>
         </nav>
+        <Link href="/">
+          <Image src="menu.svg" alt="Menu" width={24} height={24} />
+        </Link>
       </header>
       <main className={styles.hero}>
         <div className={styles.hero__left}>
@@ -27,11 +30,15 @@ export default function Home() {
             Crie sua Conta
           </Link>
         </div>
+
         <div className={styles.hero__right}>
           <img src="lp-app-bg.png" alt="Pepper" />
           <img src="lp-app-notif.png" alt="Notification of Pepper" />
         </div>
       </main>
+      <div className={styles.why__pepper}>
+        <h1>Por que a pepper?</h1>
+      </div>
     </div>
   );
 }

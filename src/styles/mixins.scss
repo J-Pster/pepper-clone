@@ -1,7 +1,7 @@
 @import 'variables', 'functions';
 
 @mixin mq($mq-value) {
-  @media (min-width: map-get($mq, $mq-value)) {
+  @media (min-width: map-get($breakpoints, $mq-value)) {
     @content;
   }
 }
